@@ -1,9 +1,11 @@
 'use strict'
 
-// Devolvemmos un objeto con la funcion que nos retorna el array con los hashtags
-// que tenga nuestra foto
+const crypto = require('crypto')
+
 const utils = {
-  extractTags
+  extractTags,
+  normalize,
+  encrypt
 }
 
 function extractTags (text) {
@@ -22,6 +24,12 @@ function normalize (text) {
   text = text.toLowerCase()
   text = text.replace(/#/g, '')
   return text
+}
+
+function encrypt (password) {
+  let shasum = crypto.createHash('sha256')
+  shasum.update(password)
+  return shasum.digest('hex')
 }
 
 module.exports = utils

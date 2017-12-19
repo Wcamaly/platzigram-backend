@@ -1,34 +1,31 @@
 {
-  "name": "platzigram-db",
+  "name": "platzigram-ws",
   "version": "1.0.0",
-  "description": "Platzigram Database Client",
+  "description": "Platzigram Realtime Backend",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "test": "ava"
+    "start": "node server.js"
   },
   "standard": {
     "parser": "babel-eslint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevenanaya/platzigram-db.git"
+    "url": "git+https://github.com/stevenanaya/platzigram-ws.git"
   },
   "author": "Steven Anaya <stvanaya@hotmail.com> (https://www.facebook.com/profile.php?id=100008781457840)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stevenanaya/platzigram-db/issues"
+    "url": "https://github.com/stevenanaya/platzigram-ws/issues"
   },
-  "homepage": "https://github.com/stevenanaya/platzigram-db#readme",
+  "homepage": "https://github.com/stevenanaya/platzigram-ws#readme",
   "devDependencies": {
-    "ava": "^0.23.0",
     "babel-eslint": "^8.0.1",
     "standard": "^10.0.3"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "co": "^4.6.0",
     "rethinkdb": "^2.3.3",
-    "uuid-base62": "^0.1.0"
+    "socket.io": "^2.0.4"
   }
 }
